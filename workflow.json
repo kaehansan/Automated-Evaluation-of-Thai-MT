@@ -1,0 +1,1685 @@
+{
+  "name": "MT_github",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_DOCUMENT_ID_HERE",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1352666191,
+          "mode": "list",
+          "cachedResultName": "RL_extract",
+          "cachedResultUrl": ""
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "source": "={{ $('Preprocess Function').item.json.sourceText }}",
+            "gpt_translation": "={{ $json.translation }}",
+            "gpt_auto_verdict": "={{ $json.verdict }}",
+            "gpt_note": "={{ $json.gpt_note }}"
+          },
+          "matchingColumns": [
+            "source"
+          ],
+          "schema": [
+            {
+              "id": "source",
+              "displayName": "source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "google_translation",
+              "displayName": "google_translation",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "google_auto_verdict",
+              "displayName": "google_auto_verdict",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "note",
+              "displayName": "note",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "gpt_translation",
+              "displayName": "gpt_translation",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "gpt_auto_verdict",
+              "displayName": "gpt_auto_verdict",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "gpt_note",
+              "displayName": "gpt_note",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "typhoon_translation",
+              "displayName": "typhoon_translation",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "typhoon_auto_verdict",
+              "displayName": "typhoon_auto_verdict",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "typhoon_note",
+              "displayName": "typhoon_note",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        4656,
+        1024
+      ],
+      "id": "06a42e73-7c9f-41ca-8747-bd45780892a3",
+      "name": "GPT Result",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_DOCUMENT_ID_HERE",
+          "mode": "list",
+          "cachedResultName": "key term extractor",
+          "cachedResultUrl": ""
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1352666191,
+          "mode": "list",
+          "cachedResultName": "RL_extract",
+          "cachedResultUrl": ""
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "source": "={{ $json.source }}",
+            "typhoon_auto_verdict": "={{ $json.typhoon_auto_verdict }}",
+            "typhoon_note": "={{ $json.typhoon_note }}\n",
+            "typhoon_translation": "={{ $json.typhoon_translation }}"
+          },
+          "matchingColumns": [
+            "source"
+          ],
+          "schema": [
+            {
+              "id": "source",
+              "displayName": "source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "google_translation",
+              "displayName": "google_translation",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "google_auto_verdict",
+              "displayName": "google_auto_verdict",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "note",
+              "displayName": "note",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "gpt_translation",
+              "displayName": "gpt_translation",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "gpt_auto_verdict",
+              "displayName": "gpt_auto_verdict",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "gpt_note",
+              "displayName": "gpt_note",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "typhoon_translation",
+              "displayName": "typhoon_translation",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "typhoon_auto_verdict",
+              "displayName": "typhoon_auto_verdict",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "typhoon_note",
+              "displayName": "typhoon_note",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        4656,
+        1216
+      ],
+      "id": "deb443ca-b74e-4a34-b6bc-db7d142157a3",
+      "name": "Typhoon Result",
+      "alwaysOutputData": true,
+      "executeOnce": false
+    },
+    {
+      "parameters": {
+        "jsCode": "// Get all input items from the previous node.\nconst items = $input.all();\n\n// Map over each item to create a new array with the desired structure.\n// This ensures each item has a 'sourceText' property for the next node.\nconst processedItems = items.map(item => {\n  // Safely access the sourceText from each item's json property.\n  const sourceText = item.json.sourceText || \"\";\n\n  // Return the object in the format expected by the 'Message a model' node.\n  return {\n    json: {\n      sourceText: sourceText\n    }\n  };\n});\n\n// Return the array of processed items.\nreturn processedItems;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3504,
+        1024
+      ],
+      "id": "abd13062-b86c-47cf-91b9-0b1b18ddd228",
+      "name": "Preprocess Function",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// Get all items from the previous 'Message a model' node.\nconst items = $input.all();\n\n// Use .map() to process each item and return a new array, which is what n8n expects.\nreturn items.map(item => {\n  // Create a shortcut to the model's content object for easier access.\n  // This is where all the data we need is located.\n  const modelContent = item.json.choices[0].message.content;\n\n  // Return a new JSON object for each item with the correctly extracted data.\n  return {\n    json: {\n      // Use the 'modelContent' shortcut to get each piece of data.\n      verdict: modelContent.Verdict,\n      gpt_note: modelContent['Verdict Notes'],\n      sourceText: modelContent.source,\n      translation: modelContent.translation\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4432,
+        1024
+      ],
+      "id": "dc50fb99-3933-4fec-9d92-00bc51792d8e",
+      "name": "Postprocess"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c2174c47-3349-4c5f-ad0c-85f1bbe73915",
+              "name": "gpt_translation",
+              "value": "={{ $json.gpt_translation }}",
+              "type": "string"
+            },
+            {
+              "id": "49de7c28-c6f7-4f4c-a905-dbf037e9a1a4",
+              "name": "gpt_auto_verdict",
+              "value": "={{ $json.gpt_auto_verdict }}",
+              "type": "string"
+            },
+            {
+              "id": "042ad0db-a34d-4f9b-a521-a6a01791eaf9",
+              "name": "source",
+              "value": "={{ $json.source }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        4880,
+        1024
+      ],
+      "id": "017e8527-8953-4db9-a151-7f27bafaa5e6",
+      "name": "GPT Edit"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c9f5f6fe-fdcc-4c08-a02d-283d5373d387",
+              "name": "typhoon_translation",
+              "value": "={{ $json.typhoon_translation }}",
+              "type": "string"
+            },
+            {
+              "id": "bbb0dd02-199d-4692-9aec-20f805acd964",
+              "name": "typhoon_auto_verdict",
+              "value": "={{ $json.typhoon_auto_verdict }}",
+              "type": "string"
+            },
+            {
+              "id": "0ed0141d-0644-4bdb-9fc5-12537bf402d5",
+              "name": "typhoon_note",
+              "value": "={{ $json.typhoon_note }}",
+              "type": "string"
+            },
+            {
+              "id": "5ebeb818-59b1-4c44-a91a-e408f8636b75",
+              "name": "source",
+              "value": "={{ $json.source }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        4880,
+        1216
+      ],
+      "id": "d617d06f-6a2a-4372-aa39-1bde7d35e08b",
+      "name": "Typhoon Edit"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_DOCUMENT_ID_HERE",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 659313208,
+          "mode": "list",
+          "cachedResultName": "RL MT Eval",
+          "cachedResultUrl": ""
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "source": "={{ $json.source }}",
+            "google_translation": "={{ $json.google_translation }}",
+            "google_verdict": "={{ $json.google_final_verdict }}",
+            "gpt_translation": "={{ $json.gpt_translation }}",
+            "GPT_verdict": "={{ $json.gpt_final_verdict }}",
+            "WINNER": "={{ $json.better_model }}"
+          },
+          "matchingColumns": [
+            "source"
+          ],
+          "schema": [
+            {
+              "id": "source",
+              "displayName": "source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "google_translation",
+              "displayName": "google_translation",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "google_verdict",
+              "displayName": "google_verdict",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "gpt_translation",
+              "displayName": "gpt_translation",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "GPT_verdict",
+              "displayName": "GPT_verdict",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "WINNER",
+              "displayName": "WINNER",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        6000,
+        1216
+      ],
+      "id": "e15f8a68-8bc1-45b1-b1f1-44cde7291a3e",
+      "name": "Eval",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// Final Corrected Script for \"Typhoon Glossary check\"\n// This script processes ALL items passed to the node.\n\nconst glossary = {\n  \"reinforcement learning\": \"การเรียนรู้แบบเสริมแรง\",\n};\n\n// Get all items passed to this node\nconst allItems = $input.all();\n\n// Use .map() to process each item individually and return an array of results\nreturn allItems.map(item => {\n  const src = item.json.sourceText || \"\";\n  const trans = item.json.translatedContent || \"\";\n  const srcLower = src.toLowerCase();\n\n  // 1. Find which glossary terms are present in the source text.\n  const termsInSource = Object.keys(glossary).filter(term => srcLower.includes(term));\n\n  // 2. If NO glossary terms are in the source, the check is Not Applicable.\n  if (termsInSource.length === 0) {\n    return {\n      json: {\n        source: src,\n        typhoon_translation: trans,\n        typhoon_auto_verdict: \"N/A\",\n        typhoon_note: \"No glossary terms were found in the source text.\",\n      }\n    };\n  }\n\n  // 3. If terms ARE in the source, but the translation is empty, REJECT it.\n  if (!trans) {\n    return {\n      json: {\n        source: src,\n        typhoon_translation: trans,\n        typhoon_auto_verdict: \"REJECTED\",\n        typhoon_note: `Translation is empty but source contains glossary term(s): ${termsInSource.join(\", \")}`,\n      }\n    };\n  }\n\n  // 4. Check if the translation contains the correct Thai phrase for each term found.\n  const failedTerms = termsInSource.filter(term => {\n    const expectedThai = glossary[term];\n    return !trans.includes(expectedThai);\n  });\n\n  // 5. Determine the final verdict based on the check.\n  if (failedTerms.length > 0) {\n    const note = `Incorrect translation for: ${failedTerms.map(term => `'${term}' (expected: '${glossary[term]}')`).join(\", \")}`;\n    return {\n      json: {\n        source: src,\n        typhoon_translation: trans,\n        typhoon_auto_verdict: \"REJECTED\",\n        typhoon_note: note,\n      }\n    };\n  } else {\n    return {\n      json: {\n        source: src,\n        typhoon_translation: trans,\n        typhoon_auto_verdict: \"PASSED\",\n        typhoon_note: \"All identified glossary terms were translated correctly.\",\n      }\n    };\n  }\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4432,
+        1216
+      ],
+      "id": "5c07eda2-c70d-44c8-8a08-6cb6aecc3aaa",
+      "name": "Typhoon Glossary check"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_DOCUMENT_ID_HERE",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 370159487,
+          "mode": "list",
+          "cachedResultName": "arXiv Reinforcement Learning",
+          "cachedResultUrl": ""
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "title": "={{ $json.data.title }}"
+          },
+          "matchingColumns": [
+            "title"
+          ],
+          "schema": [
+            {
+              "id": "title",
+              "displayName": "title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "url",
+              "displayName": "url",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        1120,
+        1216
+      ],
+      "id": "7442edf9-9bbc-4752-a793-d64f94cdb625",
+      "name": "Append or update row in sheet"
+    },
+    {
+      "parameters": {
+        "jsCode": "return new Promise(resolve => {\n  setTimeout(() => resolve($input.all()), 2000); // 2-second delay\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1792,
+        1216
+      ],
+      "id": "70a38f23-0d0c-4183-8091-046b51381026",
+      "name": "Delay Between Requests"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Need to properly return data in debug node\nreturn $input.all().map(item => {\n  console.log(\"Processing:\", item.url);\n  return item;\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1344,
+        1216
+      ],
+      "id": "8074de26-0123-4a92-b479-e2f88bed12b4",
+      "name": "debug node"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "data",
+        "include": "allOtherFields",
+        "options": {
+          "includeBinary": false
+        }
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        672,
+        1216
+      ],
+      "id": "1f118034-fdaa-48e1-86f8-5b2517a86609",
+      "name": "Split Out"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "52fc732b-09db-456b-9341-c43059cfe226",
+              "leftValue": "={{ $json.data.openAccessPdf.url }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        896,
+        1216
+      ],
+      "id": "79cf700f-7665-4929-a76f-18566bd797a5",
+      "name": "Filter"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        1216
+      ],
+      "id": "678cfb59-f409-4990-ab22-497b236c64a7",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.opentyphoon.ai/v1/chat/completions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"typhoon-v2.1-12b-instruct\",\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"You're an experienced technical translator. Translate the following English sentences that have key terminology from academic research papers to Thai. Translate accurately and completely with proper terminology.Key terminology to translate: reinforce learning. Respond with ONLY the Thai translation, no additional text or explanations.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"{{ $('Flatten Batches').item.json.sourceText }}\"\n    }\n  ],\n  \"max_tokens\": 500,\n  \"temperature\": 0.1\n}",
+        "options": {
+          "batching": {
+            "batch": {
+              "batchSize": 1,
+              "batchInterval": 15000
+            }
+          },
+          "redirect": {
+            "redirect": {}
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        3808,
+        1216
+      ],
+      "id": "705e7914-fded-4987-b415-57fcc5ad99a9",
+      "name": "Typhoon",
+      "executeOnce": false,
+      "retryOnFail": true,
+      "waitBetweenTries": 2000,
+      "alwaysOutputData": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Add this BEFORE your translation nodes\nreturn new Promise(resolve => {\n  const delay = 2000; // 2 seconds between requests\n  setTimeout(() => {\n    console.log(`Processing chunk: ${$json.chunkIndex}/${$json.totalChunks}`);\n    resolve($input.all());\n  }, delay);\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2464,
+        1216
+      ],
+      "id": "403f06d9-0e9d-4ab4-a918-ffbea2b01045",
+      "name": "Rate Limit"
+    },
+    {
+      "parameters": {
+        "jsCode": "const batchSize = 5;  // Keep small batches\nconst items = $input.all();\nconst batches = [];\n\n// Create batches\nfor (let i = 0; i < items.length; i += batchSize) {\n  const batch = items.slice(i, i + batchSize);\n  batches.push({\n    json: {\n      batch: batch.map(item => item.json),\n      batchIndex: Math.floor(i / batchSize),\n      totalBatches: Math.ceil(items.length / batchSize)\n    }\n  });\n}\n\n// Return all batches - n8n will process them sequentially\nreturn batches;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2688,
+        1216
+      ],
+      "id": "d3c858cc-0963-4f1f-91c1-42c6142dda6e",
+      "name": "Batch Processing"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_DOCUMENT_ID_HERE",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1352666191,
+          "mode": "list",
+          "cachedResultName": "RL_extract",
+          "cachedResultUrl": ""
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "source": "={{ $json.source }}",
+            "google_translation": "={{ $json.translatedText }}",
+            "google_auto_verdict": "={{ $json.auto_verdict }}",
+            "note": "={{ $json.verdict_notes }}"
+          },
+          "matchingColumns": [
+            "source"
+          ],
+          "schema": [
+            {
+              "id": "source",
+              "displayName": "source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "google_translation",
+              "displayName": "google_translation",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "google_auto_verdict",
+              "displayName": "google_auto_verdict",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "note",
+              "displayName": "note",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "gpt_translation",
+              "displayName": "gpt_translation",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "gpt_auto_verdict",
+              "displayName": "gpt_auto_verdict",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "gpt_note",
+              "displayName": "gpt_note",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "typhoon_translation",
+              "displayName": "typhoon_translation",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "typhoon_auto_verdict",
+              "displayName": "typhoon_auto_verdict",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "typhoon_note",
+              "displayName": "typhoon_note",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        4656,
+        1408
+      ],
+      "id": "5939aeb3-cc9e-4362-b8d7-55ed3f3e1288",
+      "name": "Google Result",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "267e5fb4-a391-474b-9c48-d449b7e99c85",
+              "name": "=google_translation",
+              "value": "={{ $json.google_translation }}",
+              "type": "string"
+            },
+            {
+              "id": "5b2cc536-96a6-43a2-9066-ad6e56ed9e05",
+              "name": "google_auto_verdict",
+              "value": "={{ $json.google_auto_verdict }}",
+              "type": "string"
+            },
+            {
+              "id": "0b44a856-498f-4f33-9fa6-9394266f9126",
+              "name": "source",
+              "value": "={{ $json.source }}",
+              "type": "string"
+            },
+            {
+              "id": "46faab7e-6e9a-4d75-b894-dcf861fab558",
+              "name": "note",
+              "value": "={{ $json.note }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        4880,
+        1408
+      ],
+      "id": "d5899cc3-f968-44ea-8a13-9d074ae67433",
+      "name": "Google Edit"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Get the translated text and source from the input\nconst translatedText = $input.item.json.translatedText;\nconst source = $input.item.json.source;\n\n// Initialize validation results\nlet auto_verdict = \"✅ PASSED\";\nlet verdict_notes = \"All validation checks passed.\";\n\n// Define glossary terms that should NOT be translated\nconst glossaryTerms = [\n    \"Reinforcement Learning\",\n    \"Deep Q-Learning\", \n    \"Double Q-Learning\",\n    \"Machine Learning\",\n    \"Neural Network\",\n    \"AI\",\n    \"API\",\n    // Add more terms as needed\n];\n\n// Check if any glossary terms were incorrectly translated\nconst failedTerms = [];\n\nfor (const term of glossaryTerms) {\n    // Check if the original source contains this term\n    if (source && source.includes(term)) {\n        // Check if the translated text still contains the original English term\n        if (!translatedText || !translatedText.includes(term)) {\n            failedTerms.push(term);\n        }\n    }\n}\n\n// If any terms were incorrectly translated, mark as rejected\nif (failedTerms.length > 0) {\n    auto_verdict = \"❌ REJECTED: incorrect translation\";\n    verdict_notes = `The following terms should not be translated: ${failedTerms.join(', ')}`;\n}\n\n// Return the result - n8n expects an array of i// Process all items\nconst results = [];\nfor (let i = 0; i < $input.all().length; i++) {\n  const item = $input.all()[i];\n  const translatedText = item.json.translatedText;\n  const source = item.json.source;\n  \n  // Your glossary check logic here for each item\n  // ... (your existing logic)\n  \n  results.push({\n    json: {\n      translatedText: translatedText,\n      source: source,\n      auto_verdict: auto_verdict,\n      verdict_notes: verdict_notes\n    }\n  });\n}\n\nreturn results;tems\nreturn [{\n    json: {\n        translatedText: translatedText,\n        source: source,\n        auto_verdict: auto_verdict,\n        verdict_notes: verdict_notes\n    }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4432,
+        1408
+      ],
+      "id": "19eab6ea-09ec-46cb-abdc-a5c97e89512c",
+      "name": "Glossary check"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "800a5e80-0abc-4e6e-ada0-276708cbf1ab",
+              "name": "translatedText",
+              "value": "={{ $json.translatedText }}",
+              "type": "string"
+            },
+            {
+              "id": "b9463ec4-97b4-452f-86ed-7de64f89b4ba",
+              "name": "source",
+              "value": "={{ $('Batch Processing').item.json.sourceText }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        4128,
+        1408
+      ],
+      "id": "94972045-956a-4bf1-97d1-fd886ef4a726",
+      "name": "Translation output structure check"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "974ba340-2a52-4910-b947-44390fda1bc2",
+              "name": "source",
+              "value": "={{ $json.source }}",
+              "type": "string"
+            },
+            {
+              "id": "5fe9130c-6c0f-47f2-8b83-e4db87914fa3",
+              "name": "google_translation",
+              "value": "={{ $json.google_translation }}",
+              "type": "string"
+            },
+            {
+              "id": "6ace14dc-adb1-4728-93c0-b3d934b3da7b",
+              "name": "gpt_translation",
+              "value": "={{ $json.gpt_translation }}",
+              "type": "string"
+            },
+            {
+              "id": "f79da2b0-d5ea-490e-b7a5-1840a3df1814",
+              "name": "gpt_auto_verdict",
+              "value": "={{ $json.gpt_auto_verdict }}",
+              "type": "string"
+            },
+            {
+              "id": "57801cd3-2cdd-4bb1-9ced-24213a7a3479",
+              "name": "note",
+              "value": "={{ $json.note }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        5552,
+        1216
+      ],
+      "id": "114d76ec-fac1-49a9-b7c1-5aba174d8767",
+      "name": "Simplify for Python"
+    },
+    {
+      "parameters": {
+        "batchSize": 20,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        5328,
+        1216
+      ],
+      "id": "b9e62961-333e-477f-9169-04436369729f",
+      "name": "Process in Batches"
+    },
+    {
+      "parameters": {
+        "amount": "={{ $json.waitTimeSeconds }}"
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        3584,
+        1216
+      ],
+      "id": "ab02524a-48d7-4a0c-a661-3b93cdd88722",
+      "name": "Wait",
+      "webhookId": "ac96f2ea-35be-4f5f-b9e3-fbc05fc2985f"
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"keepOnlySet\": false,\n  \"values\": {\n    \"attemptNumber\": 0,\n    \"maxRetries\": 5,\n    \"baseDelaySeconds\": 5,\n    \"maxDelaySeconds\": 120,\n    \"lastErrorMessage\": \"\",\n    \"retryStartTime\": \"={{ new Date().toISOString() }}\"\n  }\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        3264,
+        1216
+      ],
+      "id": "52e49814-c5d2-4a27-bc93-6b324c79d615",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Exponential Backoff Calculator with Enhanced Logic\nconst items = $input.all();\n\nreturn items.map((item, index) => {\n  const data = item.json;\n  \n  // Get current attempt number (0 for first try)\n  const attemptNumber = data.attemptNumber || 0;\n  const baseDelay = data.baseDelaySeconds || 5;\n  const maxDelay = data.maxDelaySeconds || 120;\n  \n  // Calculate exponential backoff: baseDelay * 2^attemptNumber\n  let calculatedDelay = baseDelay * Math.pow(2, attemptNumber);\n  \n  // Apply maximum delay cap\n  calculatedDelay = Math.min(calculatedDelay, maxDelay);\n  \n  // Add jitter (random variation ±20%) to prevent thundering herd\n  const jitterRange = calculatedDelay * 0.2;\n  const jitter = (Math.random() - 0.5) * 2 * jitterRange;\n  const finalDelay = Math.max(1, calculatedDelay + jitter); // Minimum 1 second\n  \n  // Additional delay based on item position in batch to spread requests\n  const itemSpacing = index * 2; // 2 seconds between items in same batch\n  const totalWaitTime = finalDelay + itemSpacing;\n  \n  // Calculate next attempt time for logging\n  const nextAttemptTime = new Date(Date.now() + totalWaitTime * 1000);\n  \n  return {\n    json: {\n      ...data,\n      // Core timing values\n      waitTimeSeconds: Math.round(totalWaitTime),\n      exactWaitTime: totalWaitTime,\n      \n      // Debugging information\n      calculationDetails: {\n        attemptNumber: attemptNumber,\n        baseDelay: baseDelay,\n        exponentialDelay: calculatedDelay,\n        jitterApplied: jitter,\n        itemSpacing: itemSpacing,\n        finalWaitTime: totalWaitTime\n      },\n      \n      // Metadata\n      nextAttemptTime: nextAttemptTime.toISOString(),\n      calculatedAt: new Date().toISOString(),\n      \n      // Status tracking\n      isRetry: attemptNumber > 0,\n      retryReason: attemptNumber > 0 ? 'Rate limit exceeded' : 'First attempt'\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3424,
+        1216
+      ],
+      "id": "0476a418-5690-492b-8d42-b6c97019eae1",
+      "name": "Calculate Wait"
+    },
+    {
+      "parameters": {
+        "numberInputs": 3
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        5104,
+        1200
+      ],
+      "id": "64b5fe8d-b017-470f-ac28-2e0066ac3921",
+      "name": "Merge1"
+    },
+    {
+      "parameters": {
+        "language": "python",
+        "pythonCode": "# For n8n Python mode, we need to use 'items' variable, not '_items'\n# Make sure the mode is set to \"Run Once for All Items\"\n\nprint(\"Starting evaluation script...\")\n\n# Access items using the correct n8n Python variable\ntry:\n    if 'items' in globals():\n        input_items = items\n        print(f\"Found {len(input_items)} items to process\")\n    else:\n        print(\"No items variable found\")\n        return []\nexcept Exception as e:\n    print(f\"Error accessing items: {e}\")\n    return []\n\nresults = []\n\nfor i, item in enumerate(input_items):\n    print(f\"Processing item {i+1}\")\n    \n    try:\n        # Access the json data from each item\n        item_data = item.get('json', {})\n        \n        source = item_data.get('source', '')\n        google_trans = item_data.get('google_translation', '')\n        gpt_trans = item_data.get('gpt_translation', '')\n        note = item_data.get('note', '')\n        typhoon_trans = item_data.get('typhoon_translation', '')\n        note = item_data.get('note', '')\n        \n        print(f\"Item {i+1}: source={len(source)} chars, google={len(google_trans)} chars, gpt={len(gpt_trans)} chars, typhoon = {len(typhoon_trans)}\")\n        \n        def evaluate_translation(translation, source_text):\n            if not translation or not translation.strip():\n                return {'term_accuracy': 0, 'fluency_score': 0, 'final_verdict': 'REJECTED', 'weighted_score': 0}\n            \n            term_accuracy, fluency_score = 60, 60\n\n            # Check for key terms\n            if 'Reinforcement Learning' in source_text and ('การเรียนรู้แบบเสริมแรง' in translation):\n                term_accuracy += 20\n            if 'Assistant' in source_text and 'ผู้ช่วย' in translation:\n                term_accuracy += 10\n            if 'Human Feedback' in source_text and ('ข้อมูลป้อนกลับ' in translation or 'ฟีดแบ็ค' in translation):\n                term_accuracy += 10\n            \n            # Check for fluency indicators\n            thai_particles = ['ด้วย', 'จาก', 'ที่', 'และ', 'การ']\n            if sum(1 for particle in thai_particles if particle in translation) >= 2:\n                fluency_score += 20\n            if len(translation) >= 50:\n                fluency_score += 10\n\n            term_accuracy = min(100, term_accuracy)\n            fluency_score = min(100, fluency_score)\n            \n            weighted_score = (term_accuracy * 0.6) + (fluency_score * 0.4)\n            \n            if weighted_score >= 80:\n                verdict = \"PASSED\"\n            elif weighted_score >= 65:\n                verdict = \"ACCEPTABLE\"\n            else:\n                verdict = \"REJECTED\"\n            \n            return {\n                'term_accuracy': term_accuracy,\n                'fluency_score': fluency_score,\n                'final_verdict': verdict,\n                'weighted_score': round(weighted_score, 1)\n            }\n\n        # Evaluate both translations\n        google_eval = evaluate_translation(google_trans, source)\n        gpt_eval = evaluate_translation(gpt_trans, source)\n        \n        # Determine better model\n        better_model = \"Tie\"\n        if gpt_eval['weighted_score'] > google_eval['weighted_score'] + 5:\n            better_model = \"GPT\"\n        elif google_eval['weighted_score'] > gpt_eval['weighted_score'] + 5:\n            better_model = \"Google\"\n\n        # Add result\n        results.append({\n            'json': {\n                'source': source,\n                'google_translation': google_trans,\n                'gpt_translation': gpt_trans,\n                'note': note,\n                'google_term_accuracy': google_eval['term_accuracy'],\n                'google_fluency_score': google_eval['fluency_score'],\n                'google_final_verdict': google_eval['final_verdict'],\n                'gpt_term_accuracy': gpt_eval['term_accuracy'],\n                'gpt_fluency_score': gpt_eval['fluency_score'],\n                'gpt_final_verdict': gpt_eval['final_verdict'],\n                'better_model': better_model\n            }\n        })\n        \n        print(f\"Item {i+1} processed successfully\")\n        \n    except Exception as e:\n        print(f\"Error processing item {i+1}: {e}\")\n        results.append({\n            'json': {\n                'source': 'ERROR',\n                'error': str(e),\n                'debug_info': f'Failed to process item {i+1}'\n            }\n        })\n\nprint(f\"Returning {len(results)} results\")\nreturn results"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        5776,
+        1216
+      ],
+      "id": "735e7de4-6918-450b-9cdd-2c0df06f11bf",
+      "name": "Model Eval",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// Get all items from the previous node (the Typhoon API response)\nconst translationItems = $input.all();\n\n// Get all items from the node that contains the original source text\n// This node runs before the 'Typhoon' HTTP request\nconst sourceItems = $('Flatten Batches').all();\n\n// Process each item to combine the source text with its translation\nreturn translationItems.map((item, index) => {\n  // Get the API response for the current item\n  const typhoonResponse = item.json;\n\n  // Safely get the translated text from the API response\n  let translatedContent = \"\";\n  if (typhoonResponse && typhoonResponse.choices && typhoonResponse.choices[0] && typhoonResponse.choices[0].message) {\n    translatedContent = typhoonResponse.choices[0].message.content || \"\";\n  }\n\n  // Get the corresponding original sourceText from the other node using the current item's index\n  const sourceText = sourceItems[index] ? sourceItems[index].json.sourceText : \"\";\n\n  // Return the final, combined object for the next node\n  return {\n    json: {\n      translatedContent: translatedContent.trim(),\n      sourceText: sourceText,\n      model: typhoonResponse.model || \"typhoon-v2.1-12b-instruct\"\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4128,
+        1216
+      ],
+      "id": "2ba36ea1-92af-4dbc-83d1-3471e9baca60",
+      "name": "Response Cleaner"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Process all input items\nconst results = $input.all().map(item => {\n  // Your PDF processing logic here\n  return {\n    ...item,\n    // Add any processed fields\n  };\n});\n\nreturn results;  // Maintains 1:1 input/output"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1568,
+        1216
+      ],
+      "id": "5aad9ac8-6d6e-4fde-ac68-d3104af2549c",
+      "name": "extract url"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Pagination Function\nconst queries = [\n    \"reinforcement learning\",\n    \"RL framework\",\n    \"deep reinforcement\"\n].flatMap(term => {\n    const urls = [];\n    for (let offset = 0; offset < 500; offset += 100) {\n        urls.push({\n            json: {\n                url: `http://api.semanticscholar.org/graph/v1/paper/search?query=${encodeURIComponent(term)}&offset=${offset}&limit=100&fields=title,abstract,openAccessPdf`\n            }\n        });\n    }\n    return urls;\n});\nreturn queries;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        224,
+        1216
+      ],
+      "id": "bd78e02b-c5b0-42a3-ba1e-6aca810c0925",
+      "name": "retrieve urls"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Filter').item.json.data.openAccessPdf.url }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Accept",
+              "value": "application/pdf, */*"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (compatible; n8n-workflow)"
+            }
+          ]
+        },
+        "options": {
+          "redirect": {
+            "redirect": {}
+          },
+          "response": {
+            "response": {
+              "neverError": true,
+              "responseFormat": "file"
+            }
+          },
+          "timeout": 3000000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2016,
+        1216
+      ],
+      "id": "0f8c2f98-bfca-4f16-acc3-e2a75e6890d8",
+      "name": "download PDF"
+    },
+    {
+      "parameters": {
+        "text": "={{ $json.batch[0].sourceText }}",
+        "translateTo": "th"
+      },
+      "type": "n8n-nodes-base.googleTranslate",
+      "typeVersion": 2,
+      "position": [
+        3376,
+        1408
+      ],
+      "id": "cfe495e9-4abc-49ac-b1c4-d47911b73878",
+      "name": "Google Translate",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "chatgpt-4o-latest",
+          "mode": "list",
+          "cachedResultName": "CHATGPT-4O-LATEST"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=You are an experienced technical translator specializing in academic papers.\nYour task is to translate the given English source text to Thai.\n\nThe source text is:\"{{ $('Preprocess Function').item.json.sourceText }}\"\n\nPlease adhere to the following rules:\n1.  Translate all technical terminology accurately and appropriately for a technical audience. No row is skipped. \n2.  Provide the best possible translation you can generate based on the context.\n3.  Provide your response ONLY as a valid JSON object. Do not add any text or explanations outside of the JSON structure.\n\nYour JSON object must use the following exact keys:\n- \"source\": The original, unchanged source text.\n- \"translation\": Your complete and accurate Thai translation.\n- \"Verdict\": For this task, please set this value to \"PASSED\".\n- \"Verdict Notes\": For this task, please set this value to \"Awaiting glossary check.\"",
+              "role": "=user"
+            },
+            {}
+          ]
+        },
+        "simplify": false,
+        "jsonOutput": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        4032,
+        1024
+      ],
+      "id": "d53199e4-87f7-4dc4-b776-b14b95eb1ba0",
+      "name": "Text Chunking Extraction V2",
+      "credentials": {
+        "openAiApi": {
+          "id": "lIkzI6cQb1nqfrCu",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Get the full text without chunking\nconst items = [];\nfor (const item of $input.all()) {\n  let extractedText = '';\n\n  try {\n    // FIRST, check if the incoming item is actually a PDF\n    if (item.binary && item.binary.data && item.binary.mimeType === 'application/pdf') {\n      // If it is a PDF, extract the text\n      extractedText = await extractTextFromPDF(item.binary.data);\n    } \n    // Fallback for non-PDF items or items that have no binary data\n    else {\n      // Try to find text from other sources, or mark as failed\n      extractedText = item.json?.abstract || item.json?.title || 'Extraction failed: Input was not a PDF';\n    }\n\n    // Push the successful result\n    items.push({\n      json: {\n        sourceText: extractedText,\n        fileName: item.binary?.fileName || item.json?.fileName || 'unknown',\n        chunkIndex: 1,\n        totalChunks: 1,\n        sourceLanguage: 'en',\n        targetLanguage: 'th',\n        domain: 'academic'\n      }\n    });\n\n  } catch (error) {\n    // This will now catch errors specifically from the PDF parsing process\n    console.log(`PDF parsing failed for file: ${item.binary?.fileName || 'unknown'}. Error: ${error.message}`);\n    items.push({\n      json: {\n        sourceText: 'Extraction failed: Error during PDF parsing',\n        fileName: item.binary?.fileName || item.json?.fileName || 'unknown',\n        chunkIndex: 1,\n        totalChunks: 1,\n        sourceLanguage: 'en',\n        targetLanguage: 'th',\n        domain: 'academic'\n      }\n    });\n  }\n}\n\nreturn items;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2240,
+        1216
+      ],
+      "id": "563e83d8-1053-459c-8b6d-c44b223375dd",
+      "name": "Text Chunking Extraction v2"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        448,
+        1216
+      ],
+      "id": "a2cd72f8-b381-4529-82f6-a1655df56f6a",
+      "name": "arx api"
+    },
+    {
+      "parameters": {
+        "jsCode": "const allBatches = $input.all();\nconst flattenedItems = allBatches.flatMap(batch => batch.json.batch.map(item => ({ json: item })));\nreturn flattenedItems;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2912,
+        1216
+      ],
+      "id": "629fbdfc-727d-4539-8df6-debd15943338",
+      "name": "Flatten Batches"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "GPT Result": {
+      "main": [
+        [
+          {
+            "node": "GPT Edit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Typhoon Result": {
+      "main": [
+        [
+          {
+            "node": "Typhoon Edit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Preprocess Function": {
+      "main": [
+        [
+          {
+            "node": "Text Chunking Extraction V2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Postprocess": {
+      "main": [
+        [
+          {
+            "node": "GPT Result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GPT Edit": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Typhoon Edit": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Typhoon Glossary check": {
+      "main": [
+        [
+          {
+            "node": "Typhoon Result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append or update row in sheet": {
+      "main": [
+        [
+          {
+            "node": "debug node",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Delay Between Requests": {
+      "main": [
+        [
+          {
+            "node": "download PDF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "debug node": {
+      "main": [
+        [
+          {
+            "node": "extract url",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "Filter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter": {
+      "main": [
+        [
+          {
+            "node": "Append or update row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "retrieve urls",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Typhoon": {
+      "main": [
+        [
+          {
+            "node": "Response Cleaner",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Rate Limit": {
+      "main": [
+        [
+          {
+            "node": "Batch Processing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Result": {
+      "main": [
+        [
+          {
+            "node": "Google Edit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Glossary check": {
+      "main": [
+        [
+          {
+            "node": "Google Result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Batch Processing": {
+      "main": [
+        [
+          {
+            "node": "Flatten Batches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Edit": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Translation output structure check": {
+      "main": [
+        [
+          {
+            "node": "Glossary check",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simplify for Python": {
+      "main": [
+        [
+          {
+            "node": "Model Eval",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Process in Batches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Process in Batches": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Simplify for Python",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Typhoon",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Calculate Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Calculate Wait": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge1": {
+      "main": [
+        [
+          {
+            "node": "Process in Batches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Model Eval": {
+      "main": [
+        [
+          {
+            "node": "Eval",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Response Cleaner": {
+      "main": [
+        [
+          {
+            "node": "Typhoon Glossary check",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "extract url": {
+      "main": [
+        [
+          {
+            "node": "Delay Between Requests",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "retrieve urls": {
+      "main": [
+        [
+          {
+            "node": "arx api",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "download PDF": {
+      "main": [
+        [
+          {
+            "node": "Text Chunking Extraction v2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Translate": {
+      "main": [
+        [
+          {
+            "node": "Translation output structure check",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Text Chunking Extraction V2": {
+      "main": [
+        [
+          {
+            "node": "Postprocess",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Text Chunking Extraction v2": {
+      "main": [
+        [
+          {
+            "node": "Rate Limit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "arx api": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Flatten Batches": {
+      "main": [
+        [
+          {
+            "node": "Preprocess Function",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Translate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "48264d64-0054-4379-b318-d0af38b64e8f",
+  "meta": {
+    "instanceId": "ea8658b123a67175645d302751169a7d9510a09aa09a160523681a0d2ead77a0"
+  },
+  "id": "HCplfDpRTICIIrI6",
+  "tags": []
+}
